@@ -7,7 +7,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Vote {
 	
 	@Id
@@ -18,25 +25,4 @@ public class Vote {
 	@ManyToOne
 	@JoinColumn(name="option_id")
 	private Option option;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public Option getOption() {
-		return option;
-	}
-
-	public void setOption(Option option) {
-		this.option = option;
-	}
-
-	@Override
-	public String toString() {
-		return "Vote [id=" + id + ", option=" + option + "]";
-	}
 }
