@@ -1,0 +1,5 @@
+package com.moses.demo.domain;
+
+public class Option {
+
+}
