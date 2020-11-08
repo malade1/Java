@@ -12,7 +12,7 @@ public class Option {
 	@Column(name="option_id")
 	private long id;
 	
-	@Column(name="option_id")
+	@Column(name="option_value")
 	private String value;
 
 	public long getId() {
